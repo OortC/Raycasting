@@ -88,29 +88,29 @@ all : $(NAME)
 $(NAME) : make_dir make_ar
 
 make_dir :
-	mkdir -p $(OBJ_DIR);
-	mkdir -p $(OBJ_DIR)$(DIR_IS_TO);
-	mkdir -p $(OBJ_DIR)$(DIR_STR);
-	mkdir -p $(OBJ_DIR)$(DIR_MEM);
-	mkdir -p $(OBJ_DIR)$(DIR_PUT);
-	mkdir -p $(OBJ_DIR)$(DIR_LST);
-	mkdir -p $(OBJ_DIR)$(DIR_ETC);
-	mkdir -p $(OBJ_DIR)$(DIR_GNL);
-	touch $@
+	@mkdir -p $(OBJ_DIR);
+	@mkdir -p $(OBJ_DIR)$(DIR_IS_TO);
+	@mkdir -p $(OBJ_DIR)$(DIR_STR);
+	@mkdir -p $(OBJ_DIR)$(DIR_MEM);
+	@mkdir -p $(OBJ_DIR)$(DIR_PUT);
+	@mkdir -p $(OBJ_DIR)$(DIR_LST);
+	@mkdir -p $(OBJ_DIR)$(DIR_ETC);
+	@mkdir -p $(OBJ_DIR)$(DIR_GNL);
+	@touch $@
 
 make_ar : $(OBJS)
-	ar rc $(NAME) $(OBJS)
-	touch $@
+	@ar rc $(NAME) $(OBJS)
+	@touch $@
 
 $(OBJ_DIR)%.o : $(SRC_DIR)%.c
-	$(CC) $(CFLAG) $(INCLUDE) -c $< -o $@
+	@$(CC) $(CFLAG) $(INCLUDE) -c $< -o $@
 
 clean :
-	rm -rf make_dir make_ar
-	rm -rf $(OBJ_DIR)
+	@rm -rf make_dir make_ar
+	@rm -rf $(OBJ_DIR)
 
 fclean : clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 
 re : fclean all
 
