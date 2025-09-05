@@ -1,0 +1,15 @@
+NO ./texture/Clay_Brick.xpm
+SO ./texture/Red_Brick.xpm
+WE ./texture/Mossy_Stone.xpm
+EA ./texture/Gravel.xpm
+
+C 121,237,255
+F 173,181,189
+
+111111111111
+1E0000000001
+100001111111
+100001000001
+100001001001
+100000001001
+111111111111
