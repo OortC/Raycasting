@@ -69,7 +69,7 @@ $(NAME) : $(SRC_OBJS) $(SRC_INCS)
 	@make -C $(FT_DIR)
 	@$(CC) $(CFLAG) $(FT_FLAG) $(CMLX) $(SRC_SRCS) -o $(NAME)
 	@install_name_tool -change libmlx.dylib mlx/libmlx.dylib $(NAME)
-	@echo "$(GREEN)Build Complete! - $(NAME)$(RESET)"
+	@echo "$(GREEN)Build Complete - $(NAME)$(RESET)"
 
 clean :
 	@echo "$(RED)Cleaning Object Files...$(RESET)"
