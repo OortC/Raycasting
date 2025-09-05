@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	**free_all(char **temp)
+char	**ft_free_all(char **temp)
 {
 	size_t	i;
 
@@ -84,7 +84,7 @@ char	**ft_split(char const *str, char c)
 			break ;
 		result[i] = sperate_words(str, c);
 		if (!result[i])
-			return (free_all(result));
+			return (ft_free_all(result));
 		str += ft_strlen(result[i++]);
 	}
 	result[i] = 0;
