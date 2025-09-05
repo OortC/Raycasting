@@ -40,36 +40,32 @@ FILES =	main			\
 INCS =	cub				\
 		parse			\
 
-DIR_MDT = ./mandatory/
+DIR_SRC = ./src/
 
-MDT_FILE = $(addprefix $(DIR_MDT), $(FILES))
+SRC_FILE =	$(addprefix $(DIR_SRC), $(FILES))
 
-MDT_INC =	$(addprefix $(DIR_MDT), $(INCS))
+SRC_INC =	$(addprefix $(DIR_SRC), $(INCS))
 
-MDT_SRCS = $(addsuffix .c, $(MDT_FILE))
+SRC_SRCS =	$(addsuffix .c, $(SRC_FILE))
 
-MDT_OBJS = $(addsuffix .o, $(MDT_FILE))
+SRC_OBJS =	$(addsuffix .o, $(SRC_FILE))
 
-MDT_INCS = $(addsuffix .h, $(MDT_INC))
+SRC_INCS =	$(addsuffix .h, $(SRC_INC))
 
 #FUNCTION
 $(NAME) = all
 
-all : make_mdt
+$(DIR_SRC)%.o : $(DIR_SRC)%.c
+	$(CC) $(CFLAG) -I $(DIR_SRC) -c $< -o $@
 
-$(DIR_MDT)%.o : $(DIR_MDT)%.c
-	$(CC) $(CFLAG) -I $(DIR_MDT) -c $< -o $@
-
-make_mdt : $(MDT_OBJS) $(MDT_INCS)
+all : $(SRC_OBJS) $(SRC_INCS)
 	make -C $(FT_DIR)
-	$(CC) $(CFLAG) $(FT_FLAG) $(CMLX) $(MDT_SRCS) -o $(NAME)
+	$(CC) $(CFLAG) $(FT_FLAG) $(CMLX) $(SRC_SRCS) -o $(NAME)
 	install_name_tool -change libmlx.dylib mlx/libmlx.dylib $(NAME)
-	touch $@
 
 clean :
 	make clean -C $(FT_DIR)
-	rm -rf $(MDT_OBJS)
-	rm -rf make_mdt
+	rm -rf $(SRC_OBJS)
 
 fclean : clean
 	make fclean -C $(FT_DIR)
