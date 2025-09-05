@@ -68,6 +68,7 @@ SRC_ETC =	ft_atoi 			\
 
 DIR_GNL =	gnl/
 SRC_GNL =	get_next_line		\
+			get_next_line_utils
 
 SRC_FILE +=	$(addprefix $(DIR_IS_TO), $(SRC_IS_TO))
 SRC_FILE +=	$(addprefix $(DIR_STR), $(SRC_STR))
