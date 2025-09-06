@@ -75,11 +75,15 @@ F 173,181,189
 
 ## 실행 방법
 ```bash
-#빌드
+# 저장소 클론
+git clone https://github.com/OortC/Raycasting.git
+cd minishell
+
+#빌드 (macOS만 지원함)
 make
 
 #실행 (맵 파일 입력)
-./cub3d maps/example.cub
+./raycast maps/example.cub
 ```
 
 ## 기술 스택
@@ -88,7 +92,7 @@ make
 - **그래픽 라이브러리:** MiniLibX  
 - **알고리즘:** DDA(Digital Differential Analyzer) 기반 Raycasting  
 
-## 배운 점
+## 프로젝트 성과
 - 2D 좌표계와 3D 시점 변환 이해
 - Raycasting 알고리즘 실습
 - MiniLibX를 활용한 실시간 렌더링 구현
