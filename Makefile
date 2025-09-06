@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 #-----STANDARD-----#
-NAME = cub3d
+NAME = raycast
 
 CC = cc
 CFLAG = -Wall -Wextra -Werror
