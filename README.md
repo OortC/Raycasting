@@ -86,9 +86,9 @@ make
 ./raycast maps/example.cub
 ```
 
-## 기술 스택
+## 기술 스택 & 구현
 - **언어:** C  
-- **환경:** macOS  
+- **운영체제 환경:** macOS  
 - **그래픽 라이브러리:** MiniLibX  
 - **알고리즘:** DDA(Digital Differential Analyzer) 기반 Raycasting  
 
