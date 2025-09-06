@@ -1,7 +1,7 @@
 # Raycasting
 
 ## 프로젝트 소개
-2D 맵 데이터를 기반으로 **DDA 알고리즘 기반의 Raycasting**을 사용해 3D 1인칭 시점의 랜더링을을 구현한 프로젝트입니다.  
+2D 맵 데이터를 기반으로 **DDA 알고리즘 기반의 Raycasting**을 사용해 3D 1인칭 시점의 랜더링을 구현한 팀 프로젝트입니다.  
 고전 게임 *Wolfenstein*의 렌더링 방식을 참고하여 제작했습니다.
 
 ### 주요 기능
@@ -77,7 +77,7 @@ F 173,181,189
 ```bash
 # 저장소 클론
 git clone https://github.com/OortC/Raycasting.git
-cd minishell
+cd Raycasting
 
 #빌드 (macOS만 지원함)
 make
